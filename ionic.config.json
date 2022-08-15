@@ -1,0 +1,7 @@
+{
+  "name": "stcs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
