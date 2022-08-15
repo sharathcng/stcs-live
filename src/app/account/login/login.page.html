@@ -1,0 +1,35 @@
+<ion-content color="primary" >
+
+  <div class="login-page">
+    <div  class="logo-section">
+      <img src="assets/logos/logoBG.png" class="logo" />
+    </div>
+  
+    <form [formGroup] = "loginForm" (ngSubmit)="login()" class="login-section">
+   
+        <ion-text color="primary" class="login-heading ion-text-center">
+          Login
+        </ion-text>
+    
+        <ion-item>
+          <ion-label position="floating" style="color: #ffffff;">Email</ion-label>
+          <ion-input type="email" formControlName="email"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label position="floating" style="color: #ffffff;">Password</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+    
+        <ion-text class="ion-text-end"><a>Forgot password?</a></ion-text>
+    
+        <ion-button color="secondary" type="submit">Login</ion-button>
+    
+      <ion-text color="tertiary" class="ion-text-center">Don't have an account? <a>Contact Admin</a></ion-text>
+  
+    
+  </form>
+  </div>
+
+  
+</ion-content>
