@@ -34,7 +34,7 @@ export class LoginPage implements OnInit {
     signInWithEmailAndPassword(auth, this.loginForm.value.email, this.loginForm.value.password)
       .then((userCredential) => { 
         const user = userCredential.user;
-        this.router.navigateByUrl('home')
+        this.router.navigateByUrl('home-tab')
         // ...
       })
       .catch((error) => {

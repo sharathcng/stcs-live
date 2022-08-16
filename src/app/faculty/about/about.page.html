@@ -1,75 +1,101 @@
-<ion-content [fullscreen]="true"  >
-  <div  style="background-color: #2e2f5a">
-    <ion-grid style="background-color: #2e2f5a">
-      <div  class="header">
-        <span style='font-size:25px;'(click)="back()">&#8592;</span><span class="text1">profile</span>
+<ion-content color="primary">
+  <div class="profile-page">
+
+    <div class="profile-pic-section">
+
+      <div class="back-button">
+        <ion-fab vertical="top" horizontal="start" slot="fixed">
+          <ion-fab-button (click)="goBack()">
+            <ion-icon name="return-up-back-outline"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
       </div>
-      <ion-row class="bg-clr  ion-justify-content-center " >
-        <ion-col size="6" class="bg-clr">
-          <div class="bg-clr">
-            <img src="https://cdn-icons-png.flaticon.com/512/1177/1177568.png">
-          </div>
-          <div >
-            <ion-card-header >
-              <ion-card-title class="header ">{{user.name}}</ion-card-title>
-            </ion-card-header>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    <ion-card class="data-card" >
-      <ion-card-content>
-        <ion-grid>
-          <ion-row class="ion-justify-content-start">
-            <ion-col size="6">
-              <div>Education</div>
-            </ion-col>
-            <ion-col size="3">
-              <div>{{user.education}}</div>
-            </ion-col>
-          </ion-row>
-          <ion-row class="ion-justify-content-start">
-            <ion-col size="6">
-              <div>Expirience</div>
-            </ion-col>
-            <ion-col size="3">
-              <div>{{user.expirience}}</div>
-            </ion-col>
-          </ion-row>
-          <ion-row class="ion-justify-content-start">
-            <ion-col size="6">
-              <div>Subject</div>
-            </ion-col>
-            <ion-col size="3">
-              <div>{{user.subject}}</div>
-            </ion-col>
-          </ion-row>
-          <ion-row class="ion-justify-content-start">
-            <ion-col size="6">
-              <div>Blood Group</div>
-            </ion-col>
-            <ion-col size="3">
-              <div>{{user.bloodGrp}}</div>
-            </ion-col>
-          </ion-row>
-          <ion-row class="ion-justify-content-start">
-            <ion-col size="6">
-              <div>Class Incharge</div>
-            </ion-col>
-            <ion-col size="5">
-              <div>{{user.classInCharge}}</div>
-            </ion-col>
-          </ion-row>
-          <ion-row class="ion-justify-content-start">
-            <ion-col size="6">
-              <div>Number</div>
-            </ion-col>
-            <ion-col size="5">
-              <div>{{user.phNum}}</div>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-card-content>
-    </ion-card>
+
+      <div class="profile-pic">
+        <img src="assets/icon/profile-1.png"/>
+        <div class="profile-name ion-text-center">
+          <ion-text >Sharath HG</ion-text>
+        </div>
+        <div class="role ion-text-center">
+          <ion-text >Teacher</ion-text>
+        </div>
+      </div>
+    </div>
+  
+    <div class="profile-detail-section">
+      <ion-grid class="detail-grid ion-no-margin">
+        <ion-row>
+          <ion-col>
+            <ion-text color="primary">Date of Birth</ion-text>
+          </ion-col>
+          <ion-col>
+            :
+          </ion-col>
+          <ion-col>
+            <ion-text color="tertiary">04-12-1997</ion-text>
+          </ion-col>
+        </ion-row>
+
+        <hr color="primary">
+
+        <ion-row>
+          <ion-col>
+            <ion-text color="primary">Blood Group</ion-text>
+          </ion-col>
+          <ion-col>
+            :
+          </ion-col>
+          <ion-col>
+            <ion-text color="tertiary">O+</ion-text>
+          </ion-col>
+        </ion-row>
+
+        <hr color="primary">
+
+        <ion-row>
+          <ion-col>
+            <ion-text color="primary">Contact</ion-text>
+          </ion-col>
+          <ion-col>
+            :
+          </ion-col>
+          <ion-col>
+            <ion-text color="tertiary">8095908658</ion-text>
+          </ion-col>
+        </ion-row>
+
+        <hr color="primary">
+
+        <ion-row>
+          <ion-col>
+            <ion-text color="primary">Experience</ion-text>
+          </ion-col>
+          <ion-col>
+            :
+          </ion-col>
+          <ion-col>
+            <ion-text color="tertiary">3 Years</ion-text>
+          </ion-col>
+        </ion-row>
+
+        <hr color="primary">
+
+        <ion-row>
+          <ion-col>
+            <ion-text color="primary">Education</ion-text>
+          </ion-col>
+          <ion-col>
+            :
+          </ion-col>
+          <ion-col>
+            <ion-text color="tertiary">MCA</ion-text>
+          </ion-col>
+        </ion-row>
+
+        <hr color="primary">
+
+      </ion-grid>
+    </div>
   </div>
+ 
 </ion-content>

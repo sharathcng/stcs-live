@@ -1,20 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { Router } from '@angular/router';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getDatabase, onValue, ref } from 'firebase/database';
 import { Observable } from 'rxjs';
+
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-home-tab',
+  templateUrl: './home-tab.page.html',
+  styleUrls: ['./home-tab.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomeTabPage implements OnInit {
 
   username:string
   fullname:string
   quotes:Observable<any[]>
 
-  constructor(private database:AngularFireDatabase) { }
+  constructor(private database:AngularFireDatabase, private router:Router) { }
   ngOnInit(): void {
 
 
@@ -48,5 +50,8 @@ export class HomePage implements OnInit {
     });
   }
 
+  openProfilePage(){
+    this.router.navigateByUrl('about')
+  }
 
 }

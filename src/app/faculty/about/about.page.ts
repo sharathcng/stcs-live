@@ -21,8 +21,8 @@ export class AboutPage implements OnInit {
 
   ngOnInit() {
   }
-  back()
+  goBack()
   {
-    this.router.navigateByUrl('home')
+    this.router.navigateByUrl('')
   }
 }
