@@ -1,3 +1,72 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane contentId="main-content" color="primary">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-header color="primary">
+        <ion-toolbar color="primary">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content color="primary">
+        <ion-list style="background: #033249;">
+          <ion-menu-toggle auto-hide="false">
+            <ion-item color="primary" routerLink="/tabs/home-tab" routerLinkActive="selected">
+              <ion-icon name="home-outline" slot="start"></ion-icon>
+              <ion-label>Dashboard</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item color="primary">
+              <ion-icon name="albums-outline" slot="start"></ion-icon>
+              <ion-label>Batches</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item color="primary">
+              <ion-icon name="school-outline" slot="start"></ion-icon>
+              <ion-label>Classes</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item color="primary">
+              <ion-icon name="people-outline" slot="start"></ion-icon>
+              <ion-label>Teaching Staff</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item color="primary">
+              <ion-icon name="people-circle-outline" slot="start"></ion-icon>
+              <ion-label>Non Teaching Staff</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item color="primary">
+              <ion-icon name="library-outline" slot="start"></ion-icon>
+              <ion-label>Teacher Allocation</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item color="primary">
+              <ion-icon name="calendar-outline" slot="start"></ion-icon>
+              <ion-label>Time Table</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item color="primary">
+              <ion-icon name="newspaper-outline" slot="start"></ion-icon>
+              <ion-label>Subjects</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>

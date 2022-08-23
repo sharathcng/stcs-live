@@ -1,44 +1,41 @@
 .profile-page{
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
 }
 
-.profile-pic-section{
+.top-section{
+    height: 30%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
-.profile-pic{
-    border-radius: 50%;
-    height: 35%;
-    width: 35%;
-}
-
-.profile-detail-section{
+.bottom-section{
     background:#ffffff;
-    height: 60%;
+    height: 65%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border-top-right-radius: 130px;
-    padding: 20px;
+    border-top-right-radius: 120px;
+    padding: 10px;
 }
 
-.profile-name{
-    margin-top: 10px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+ion-avatar{
+    width: 50%;
+    height: 75%;
+}
+
+.top-text-first{
+    font-family: 'Poppins', sans-serif;
     font-size: larger;
 }
 
-.role{
-    margin-top: 10px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+.top-text-second{
+    font-family: 'Poppins', sans-serif;
     font-size: medium;
 }
 
@@ -51,23 +48,7 @@ ion-col{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.back-button{
+.logout-section{
     display: flex;
-    
+    justify-content: center;
 }
-
-
-// .profile-pic{
-//     height: 250px;
-//     width: 200px;
-// }
-// .data-card{
-//     border-top-right-radius: 125px;
-// }
-// .header{
-//     color: white;
-//     font-size:larger;
-// }
-// .text1{
-// padding-left: 10px;
-// }

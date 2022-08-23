@@ -1,101 +1,85 @@
 <ion-content color="primary">
   <div class="profile-page">
-
-    <div class="profile-pic-section">
-
-      <div class="back-button">
-        <ion-fab vertical="top" horizontal="start" slot="fixed">
-          <ion-fab-button (click)="goBack()">
-            <ion-icon name="return-up-back-outline"></ion-icon>
-          </ion-fab-button>
-        </ion-fab>
-      </div>
-
-      <div class="profile-pic">
-        <img src="assets/icon/profile-1.png"/>
-        <div class="profile-name ion-text-center">
-          <ion-text >Sharath HG</ion-text>
-        </div>
-        <div class="role ion-text-center">
-          <ion-text >Teacher</ion-text>
-        </div>
-      </div>
+    <ion-fab vertical="top" horizontal="start" slot="fixed">
+      <ion-fab-button (click)="goBack()">
+        <ion-icon name="return-up-back-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    <div class="top-section">
+      <ion-avatar>
+        <ion-img src="{{currentUser.profilePic}}"></ion-img>
+      </ion-avatar>
+      <ion-text class="ion-text-center top-text-first">{{currentUser.firstName}} {{currentUser.lastName}}</ion-text>
+      <ion-text class="ion-text-center top-text-second">{{currentUser.role}}</ion-text>
     </div>
+    <div class="bottom-section">
+        <ion-grid class="detail-grid ion-no-margin">
+          <ion-row>
+            <ion-col>
+              <ion-text color="primary">Date of Birth</ion-text>
+            </ion-col>
+        
+            <ion-col>
+              <ion-text color="tertiary">{{currentUser.dateOfBirth}}</ion-text>
+            </ion-col>
+          </ion-row>
   
-    <div class="profile-detail-section">
-      <ion-grid class="detail-grid ion-no-margin">
-        <ion-row>
-          <ion-col>
-            <ion-text color="primary">Date of Birth</ion-text>
-          </ion-col>
-          <ion-col>
-            :
-          </ion-col>
-          <ion-col>
-            <ion-text color="tertiary">04-12-1997</ion-text>
-          </ion-col>
-        </ion-row>
-
-        <hr color="primary">
-
-        <ion-row>
-          <ion-col>
-            <ion-text color="primary">Blood Group</ion-text>
-          </ion-col>
-          <ion-col>
-            :
-          </ion-col>
-          <ion-col>
-            <ion-text color="tertiary">O+</ion-text>
-          </ion-col>
-        </ion-row>
-
-        <hr color="primary">
-
-        <ion-row>
-          <ion-col>
-            <ion-text color="primary">Contact</ion-text>
-          </ion-col>
-          <ion-col>
-            :
-          </ion-col>
-          <ion-col>
-            <ion-text color="tertiary">8095908658</ion-text>
-          </ion-col>
-        </ion-row>
-
-        <hr color="primary">
-
-        <ion-row>
-          <ion-col>
-            <ion-text color="primary">Experience</ion-text>
-          </ion-col>
-          <ion-col>
-            :
-          </ion-col>
-          <ion-col>
-            <ion-text color="tertiary">3 Years</ion-text>
-          </ion-col>
-        </ion-row>
-
-        <hr color="primary">
-
-        <ion-row>
-          <ion-col>
-            <ion-text color="primary">Education</ion-text>
-          </ion-col>
-          <ion-col>
-            :
-          </ion-col>
-          <ion-col>
-            <ion-text color="tertiary">MCA</ion-text>
-          </ion-col>
-        </ion-row>
-
-        <hr color="primary">
-
-      </ion-grid>
+          <hr color="primary">
+  
+          <ion-row>
+            <ion-col>
+              <ion-text color="primary">Gender</ion-text>
+            </ion-col>
+            
+            <ion-col>
+              <ion-text color="tertiary">{{currentUser.gender}}</ion-text>
+            </ion-col>
+          </ion-row>
+  
+          <hr color="primary">
+  
+          <ion-row>
+            <ion-col>
+              <ion-text color="primary">Blood Group</ion-text>
+            </ion-col>
+            
+            <ion-col>
+              <ion-text color="tertiary">{{currentUser.bloodGroup}}</ion-text>
+            </ion-col>
+          </ion-row>
+  
+          <hr color="primary">
+  
+          <ion-row>
+            <ion-col>
+              <ion-text color="primary">Contact</ion-text>
+            </ion-col>
+            
+            <ion-col>
+              <ion-text color="tertiary">{{currentUser.phoneNumber}}</ion-text>
+            </ion-col>
+          </ion-row>
+  
+          <hr color="primary">
+  
+          <ion-row>
+            <ion-col>
+              <ion-text color="primary">Experience</ion-text>
+            </ion-col>
+            
+            <ion-col>
+              <ion-text color="tertiary">{{experience}}</ion-text>
+            </ion-col>
+          </ion-row>
+  
+        
+          <hr color="primary">
+          <!-- <div class="logout-section">
+            <ion-button color="secondary" (click)="userSignOut()">Logout</ion-button>
+          </div> -->
+          
+        </ion-grid>
+      </div>
     </div>
-  </div>
- 
+
 </ion-content>

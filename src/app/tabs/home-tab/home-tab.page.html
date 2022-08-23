@@ -1,12 +1,20 @@
-<ion-content color="primary">
+<ion-header [translucent]="true" style="--background: transparent;">
+  <ion-fab vertical="top" horizontal="start" slot="fixed">
+    <ion-fab-button>
+      <ion-buttons slot="start">
+        <ion-menu-button style="--color:red"></ion-menu-button>
+      </ion-buttons>
+    </ion-fab-button>
+  </ion-fab>
+</ion-header>
 
+<ion-content color="primary" >
   <div class="login-page">
     <div class="logo-section">
       <img src="assets/logos/logoBG.png" class="logo" />
-      <!-- fab placed to the top end -->
       <ion-fab vertical="top" horizontal="end" slot="fixed">
         <ion-fab-button (click)="openProfilePage()" style="--background: #ffffff;">
-          <img src="assets/profile-pic.png" />
+          <img src="{{profilePicUrl}}" />
         </ion-fab-button>
       </ion-fab>
     </div>
@@ -18,7 +26,11 @@
         <br>
         <ion-text color="primary" class="username-subtitle">Let's start teaching!</ion-text>
       </ion-card>
-
+      <div class="ion-page" id="mainContent" main>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      </div>
 
       <ion-card color="primary" class="quote-card">
         <ion-card-header>
@@ -37,6 +49,4 @@
 
     </div>
   </div>
-
-
 </ion-content>

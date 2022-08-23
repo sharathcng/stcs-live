@@ -12,45 +12,32 @@ import { Observable } from 'rxjs';
 })
 export class HomeTabPage implements OnInit {
 
-  username:string
-  fullname:string
-  quotes:Observable<any[]>
+  username: string
+  fullname: string
+  profilePicUrl: string
+  quotes: Observable<any[]>
+  public auth = getAuth();
 
-  constructor(private database:AngularFireDatabase, private router:Router) { }
+  constructor(private database: AngularFireDatabase, private router: Router) { }
   ngOnInit(): void {
-
-
-    const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(this.auth, (user) => {
       if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/firebase.User
         const uid = user.uid;
         this.username = user.email
-
-
         const db = getDatabase();
-    
-        onValue(ref(db, '/users/' + uid ), (snapshot) => {
-          console.log(snapshot);
-          console.log(snapshot.val())
+
+        onValue(ref(db, '/users/' + uid), (snapshot) => {
           this.fullname = snapshot.val().firstName + snapshot.val().lastName
-          //const username = (snapshot.val() && snapshot.val().name) || 'Anonymous';
-          // ...
+          this.profilePicUrl = snapshot.val().profilePic
         })
-
         this.quotes = this.database.list('/quotes', ref => ref.limitToLast(1)).snapshotChanges()
-        console.log(this.quotes)
-
-        // ...
       } else {
-        // User is signed out
-        // ...
+        this.router.navigateByUrl('login')
       }
     });
   }
 
-  openProfilePage(){
+  openProfilePage() {
     this.router.navigateByUrl('about')
   }
 
