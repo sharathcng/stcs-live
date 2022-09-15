@@ -1,0 +1,85 @@
+<ion-content color="primary">
+  <div class="profile-page">
+    <ion-fab vertical="top" horizontal="start" slot="fixed">
+      <ion-fab-button (click)="goBack()">
+        <ion-icon name="return-up-back-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    <div class="top-section">
+      <ion-avatar>
+        <ion-img src="{{teacherData.profilePic}}"></ion-img>
+      </ion-avatar>
+      <ion-text class="ion-text-center top-text-first">{{teacherData.firstName}} {{teacherData.lastName}}</ion-text>
+      <ion-text class="ion-text-center top-text-second">{{teacherData.role}}</ion-text>
+    </div>
+    <div class="bottom-section">
+        <ion-grid class="detail-grid ion-no-margin">
+          <ion-row>
+            <ion-col>
+              <ion-text color="primary">Date of Birth</ion-text>
+            </ion-col>
+        
+            <ion-col>
+              <ion-text color="tertiary">{{teacherData.dateOfBirth}}</ion-text>
+            </ion-col>
+          </ion-row>
+  
+          <hr color="primary">
+  
+          <ion-row>
+            <ion-col>
+              <ion-text color="primary">Gender</ion-text>
+            </ion-col>
+            
+            <ion-col>
+              <ion-text color="tertiary">{{teacherData.gender}}</ion-text>
+            </ion-col>
+          </ion-row>
+  
+          <hr color="primary">
+  
+          <ion-row>
+            <ion-col>
+              <ion-text color="primary">Blood Group</ion-text>
+            </ion-col>
+            
+            <ion-col>
+              <ion-text color="tertiary">{{teacherData.bloodGroup}}</ion-text>
+            </ion-col>
+          </ion-row>
+  
+          <hr color="primary">
+  
+          <ion-row>
+            <ion-col>
+              <ion-text color="primary">Contact</ion-text>
+            </ion-col>
+            
+            <ion-col>
+              <ion-text color="tertiary">{{teacherData.phoneNumber}}</ion-text>
+            </ion-col>
+          </ion-row>
+  
+          <hr color="primary">
+  
+          <ion-row>
+            <ion-col>
+              <ion-text color="primary">Address</ion-text>
+            </ion-col>
+            
+            <ion-col>
+              <ion-text color="tertiary">{{teacherData.phoneNumber}}</ion-text>
+            </ion-col>
+          </ion-row>
+  
+        
+          <hr color="primary">
+          <!-- <div class="logout-section">
+            <ion-button color="secondary" (click)="userSignOut()">Logout</ion-button>
+          </div> -->
+          
+        </ion-grid>
+      </div>
+    </div>
+
+</ion-content>

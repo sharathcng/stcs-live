@@ -32,9 +32,10 @@ export class AboutPage implements OnInit {
     if (user) {
 
       const db = getDatabase();
-      onValue(ref(db, '/users/' + userId), (snapshot) => {
+      onValue(ref(db, '/teachers/' + userId), (snapshot) => {
         this.currentUser = (snapshot.val() || 'Anonymous')
       })
+      console.log(this.currentUser.joiningDate)
       this.calculateExperience(this.currentDate, new Date(this.currentUser.joiningDate))
       // this.getProfilePic(this.currentUser.profilePic)
 

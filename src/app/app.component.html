@@ -16,28 +16,28 @@
           </ion-menu-toggle>
 
           <ion-menu-toggle auto-hide="false">
-            <ion-item color="primary">
+            <ion-item color="primary" routerLink="batches" routerLinkActivate="selected"> 
               <ion-icon name="albums-outline" slot="start"></ion-icon>
               <ion-label>Batches</ion-label>
             </ion-item>
           </ion-menu-toggle>
 
           <ion-menu-toggle auto-hide="false">
-            <ion-item color="primary">
+            <ion-item color="primary" [routerLink]="['/classes',year]" routerLinkActivate="selected">
               <ion-icon name="school-outline" slot="start"></ion-icon>
               <ion-label>Classes</ion-label>
             </ion-item>
           </ion-menu-toggle>
 
           <ion-menu-toggle auto-hide="false">
-            <ion-item color="primary">
+            <ion-item color="primary" routerLink="teachers" routerLinkActivate="selected">
               <ion-icon name="people-outline" slot="start"></ion-icon>
               <ion-label>Teaching Staff</ion-label>
             </ion-item>
           </ion-menu-toggle>
 
           <ion-menu-toggle auto-hide="false">
-            <ion-item color="primary">
+            <ion-item color="primary" routerLink="staffs" routerLinkActivate="selected">
               <ion-icon name="people-circle-outline" slot="start"></ion-icon>
               <ion-label>Non Teaching Staff</ion-label>
             </ion-item>

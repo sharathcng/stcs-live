@@ -27,7 +27,7 @@ export class AccountTabPage implements OnInit {
     if (user) {
 
       const db = getDatabase();
-      onValue(ref(db, '/users/' + userId), (snapshot) => {
+      onValue(ref(db, '/teachers/' + userId), (snapshot) => {
         this.currentUser = (snapshot.val() || 'Anonymous')
       })
       

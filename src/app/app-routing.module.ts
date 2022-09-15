@@ -23,7 +23,41 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs/tabs.module').then( m => m.TabsPageModule)
+  },
+  {
+    path: 'batches',
+    loadChildren: () => import('./academic/batches/batches.module').then( m => m.BatchesPageModule)
+  },
+  {
+    path: 'classes/:id',
+    loadChildren: () => import('./academic/classes/classes.module').then( m => m.ClassesPageModule)
+  },
+  {
+    path: 'students/:year/:id',
+    loadChildren: () => import('./academic/students/students.module').then( m => m.StudentsPageModule)
+  },
+  {
+    path: 'student-profile/:id',
+    loadChildren: () => import('./profile/student-profile/student-profile.module').then( m => m.StudentProfilePageModule)
+  },
+  {
+    path: 'teachers',
+    loadChildren: () => import('./faculty/teachers/teachers.module').then( m => m.TeachersPageModule)
+  },
+  {
+    path: 'teacher-profile/:id',
+    loadChildren: () => import('./profile/teacher-profile/teacher-profile.module').then( m => m.TeacherProfilePageModule)
+  },
+  {
+    path: 'staff-profile/:id',
+    loadChildren: () => import('./profile/staff-profile/staff-profile.module').then( m => m.StaffProfilePageModule)
+  },
+  {
+    path: 'staffs',
+    loadChildren: () => import('./faculty/staffs/staffs.module').then( m => m.StaffsPageModule)
   }
+
+
 
 
 

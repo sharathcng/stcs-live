@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+        <ion-title >Teachers list</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen="true" scroll-y="true" color="primary">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" *ngFor="let item of teachersList | keyvalue">
+        <ion-card [routerLink]="['/teacher-profile',item.key]" routerLinkActive="active" color="primary" >
+          <ion-card-header>
+            <ion-card-title><b>{{item.value.firstName}}</b></ion-card-title>
+          </ion-card-header>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

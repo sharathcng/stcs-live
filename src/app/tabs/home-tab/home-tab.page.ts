@@ -26,11 +26,11 @@ export class HomeTabPage implements OnInit {
         this.username = user.email
         const db = getDatabase();
 
-        onValue(ref(db, '/users/' + uid), (snapshot) => {
+        onValue(ref(db, '/teachers/' + uid), (snapshot) => {
           this.fullname = snapshot.val().firstName + snapshot.val().lastName
           this.profilePicUrl = snapshot.val().profilePic
         })
-        this.quotes = this.database.list('/quotes', ref => ref.limitToLast(1)).snapshotChanges()
+        this.quotes = this.database.list('/quotes/', ref => ref. ref.limitToLast(1)).snapshotChanges()
       } else {
         this.router.navigateByUrl('login')
       }
